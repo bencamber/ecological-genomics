@@ -281,9 +281,38 @@ chunk_output_type: console
 <div id='id-section21'/>   
 
 ### Entry 21: 2020-01-29, Wednesday.   
+-What alleles are relevant to adaptation to climate in a red spruce?
+  ->Exome capture dataset of edge populations will tell us!
+  
+-Conservationists are inadvertantly diluting adaptive warm-climate alleles by collecting seeds from the entire Red Spruce range and planting them in Maryland and West Virginia.
 
+-Extensive transcriptome from White Spruce served as the basis for the whole exome sequencing of Red Spruce. 
 
+-38,570 unigenes identified in Red Spruce with 85% accuracy. 
 
+-The entire point of exome sequencing is that you can easily create a whole-body transcriptome, as long as you don't care about gene expression, just gene sequence. That's why the white spruce transcriptome came in clutch. 
+
+-Workflow:
+```mermaid
+graph TD
+A[.fastq]-->B|Visualize|[FastQC]
+A-->C[Trimmomatic]-->B
+C-->|map|D[Reference genome]
+D-->E[Covert to .bam file]
+```
+^ Of course that didn't work. 
+
+zcat function peeks inside zipped files
+
+Fourth line of each .gz file is ASCII individual base quality score. Equivalent of peak shapes in Sanger seq. 
+
+Phred score: probability of correct base call. P = 10^(-Q/10). Phred score of 40 means 1/10000 chance of incorrect base call. 
+  -Good Phred score does NOT guarantee that the base call is actually what's in the genome because there could have been a PCR. 
+  -Phred score DOES take into account differences in Illumina clusters (like if 1/10000 strands had a different fluorophore signal for a given nucleotide)
+
+I'm taking the MRC pop. 
+
+-Workflow consists of accessing the data in the shared space but redirecting them to my own directory. 
 ------
 <div id='id-section22'/>   
 
