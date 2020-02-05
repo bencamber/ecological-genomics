@@ -292,15 +292,6 @@ chunk_output_type: console
 
 -The entire point of exome sequencing is that you can easily create a whole-body transcriptome, as long as you don't care about gene expression, just gene sequence. That's why the white spruce transcriptome came in clutch. 
 
--Workflow:
-```mermaid
-graph TD
-A[.fastq]-->B|Visualize|[FastQC]
-A-->C[Trimmomatic]-->B
-C-->|map|D[Reference genome]
-D-->E[Covert to .bam file]
-```
-^ Of course that didn't work. 
 
 zcat function peeks inside zipped files
 
