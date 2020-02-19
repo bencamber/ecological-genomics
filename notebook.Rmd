@@ -327,7 +327,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ### Entry 28: 2020-02-19, Wednesday.   
+# We noticed a strange pattern in the site frequency histogram where there were a lot of SNPS with high frequency. The curve that should have been asymptotic towards the x axis actually had a quadratic curve. This is due to our assumption that the reference genome was ancestral to the sampled genomes, when really it was just another variant and had SNPs that none of the samples we were examining had. 
 
+# To fix, we're "folding" the histogram at the 1N point of the x-axis. This gets around the ancestry unknown.
+# We're also going to consider the minor allele frequency instead of the derived allele frequency. 
+# zero copies of the minor allele means that the major allele is fixed.
+
+# After estimating rough site frequency spectra, we estimate SFS again using the .sfs file to get a much more refined result. 
+
+# Next, we doTheta to get an estimate of nucleotide diversity (theta=4*Ne*mu)
+
+# RS pops seem like the ancestral, contiguous population experienced a bottleneck, then as the populations fragmented and contracted, they experienced a relatively synchronized loss of rare alleles. Human genome is 4-5% SNPs. RS genomes examined here averaged less than 1% SNPs. I wonder what it was like before the bottleneck. 
+
+# Tajima's D is strange. Most pops have a negative D because populations are expanding, but the positive D values here indicate that the species is not doing well. 
 
 
 ------    
