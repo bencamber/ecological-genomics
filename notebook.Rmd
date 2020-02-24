@@ -363,7 +363,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ### Entry 31: 2020-02-24, Monday.   
+# Reverse ecology: let genomic or transcriptomic data tell you what the important phenotypes are. What's under selection? What has functional variation?
+# Genomic changes lead to phenotype changes:
+  # mutations in coding regions, splice sites, regulatory regions
+  # somatic recombination
+  # epigenetic modifications
+# P = G + E + (G*E)
+# put another way: Expression ~ treatment + family + (treatment*family)
 
+# By controlling environment, you can experimentally determine the link between genotype and phenotype
+# To isolate gene expression factors, control environment with common garden design, treatments, population stratification, tissue/cell, life history stage, transgenerational environmental effects, sex.
+
+# Transcriptomics Workflow:
+# 1. Careful experimental design: Question, hypotheses, then control factors to maximize the extent to which your transcriptome addresses the conditions of interest
+
+# 2. Experiment: sample tissues and individuals, save RNA, extract mRNA, prep, sequence.
+
+# 3. Process and analyze data: QC->clean->QC, map to ref, normalize
+
+# 4. Integrate, gene ontology, network analyses
 
 
 ------    
