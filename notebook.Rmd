@@ -397,6 +397,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ### Entry 33: 2020-02-26, Wednesday.   
+Transcriptomics!
+Sampled seeds from cones of red spruce, put them in a common garden. Transcriptomes were already trimmed with trimmomatic. Instead of mapping with BWA and outputting to .sam, we're combining the mapping step with the quantification of abundance normally done by ANGSD using the program Salmon. quant.sf files produced by Salmon is analyzed and visualized in DESeq2. 
+
+Ten maternal families, five from cool n' wet, five from hot n' dry. What happens to each if you adjust temp and moisture levels to hotter and drier conditions?
+
+RNA was extracted from entire samples instead of single tissues to save time and money.
+
+3' tag sequencing requires only a small amount of high-quality RNA. Apparently our core facility needs to get good. 
+
+Factors: Treatment (cold/wet,hot/dry), Source climate (cold/wet,hot/dry), Time (0,5,10 days)
+What questions can we ask with this experimental design?
+1. Do individuals from different source climates have different gene expression profiles in a common environment (treatment = TR)? 
+EXP ~ C + TR + (C*TR)
+
+2. Do individuals from different source climates have different gene expression profiles *at different time points*? (interaction between fixed effects source climate (C) and time (T) variables with family as a random effect: EXP ~ T + C + T*C + F
+3. Transcriptome-wide response to heat stress? Does this change with the additional stress of drought?
+4. What specific genes are involved in these responses?
+5. Is there an interaction effect between source climate and stress treatment response (do families from hot/dry have a unique response to hot or hot/dry compared to families from cool/wet)?
+
+Taking two groups: CAM_C and CAM_D 
 
 
 
