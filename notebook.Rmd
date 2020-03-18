@@ -457,7 +457,8 @@ Taking two groups: CAM_C and CAM_D
 
 
 ### Entry 38: 2020-03-04, Wednesday.   
-
+Made some salmon mapping scripts.
+Looking for number of reads and mapping percent of RS transcriptome to P. abies reference genome. 
 
 
 ------    
