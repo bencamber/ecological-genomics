@@ -538,7 +538,31 @@ Looking for number of reads and mapping percent of RS transcriptome to P. abies 
 
 
 ### Entry 48: 2020-03-18, Wednesday.   
+Pandemic time: first meeting on Teams
 
+DESeq Main Idea: using gene expression data from Red Spruce to test differential expression of genes between control, hot, and hot and dry treated trees from cold and warm climate origin populations. 
+
+Imported counts table and samples description table to R
+Measured mean counts per sample (2743475) and counts per gene mean (3139) and median (24)
+
+Created a DESeq object with an experimental design relating treatment, climate, and day (later simplified to just treatment and climate for HW assignment).
+
+The resulting dds object had genes with low read counts (fewer than one read per sample).
+
+Ran the DESeq model to test for differential gene expression: 1) estimate size factors (per sample), 2) estimate dispersion (per gene), 3) run negative binomial glm.
+
+Made a new DESeq model with experimental design relating climate, treatment, and day and ran the model, again filtering out genes with low counts.
+
+Ordered, listed, and summarized results from specific contrasts using results() function of DESeq2 package.
+
+Visualized log fold changes between control and hot/dry conditions with MA plot: Significant number of significantly higher expressed genes vs. control, but few significantly downregulated genes vs. control.
+
+Calculated principle components and graphed the individuals, using different colors for the source climates and different shapes for control, hot, and hot/dry treatments: the climate of origin doesn't appear to affect transcriptional response to hot or hot/dry treatment
+
+Calculated and visualized counts of specific top genes: hot/dry treated trees of either origin have higher expression of the most differentially expressed genes. 
+
+
+  
 
 
 ------    
@@ -562,8 +586,8 @@ Looking for number of reads and mapping percent of RS transcriptome to P. abies 
 
 
 ### Entry 51: 2020-03-23, Monday.   
-
-
+Brendan presents: CNVs, eSNPs, and understanding/modeling their effects on gene expression. 
+Baxter presents Stickleback paper: Pct is poor man's Qst: gene expression differentiation between and among fish in lakes vs rivers. Fst is expected (heterozygosity - observed heterozygosity / observed heterozygosity). This is most similar to what the researchers did to find Fct (eSNPs).
 
 ------    
 <div id='id-section52'/>   
@@ -578,7 +602,8 @@ Looking for number of reads and mapping percent of RS transcriptome to P. abies 
 
 
 ### Entry 53: 2020-03-25, Wednesday.   
-
+Reid presents epigenomics.
+Some organisms have nonbinary methylation. This is especially noticeable when you have to grind up a whole individual (invertebrate) vs. sample a single tissue in a vertebrate since cells within a tissue are more likely to have similar methylation profile. 
 
 
 ------    
