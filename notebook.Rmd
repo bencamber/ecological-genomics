@@ -1,5 +1,5 @@
 ---
-title: "notebook"
+title: "Notebook"
 author: "Ben Camber"
 date: "1/28/2020"
 output: html_document
@@ -606,6 +606,10 @@ Reid presents epigenomics.
 Some organisms have nonbinary methylation. This is especially noticeable when you have to grind up a whole individual (invertebrate) vs. sample a single tissue in a vertebrate since cells within a tissue are more likely to have similar methylation profile. 
 
 
+
+
+
+
 ------    
 <div id='id-section54'/>   
 
@@ -627,7 +631,20 @@ Some organisms have nonbinary methylation. This is especially noticeable when yo
 
 
 ### Entry 56: 2020-03-30, Monday.   
+Sandra presents: Methylation-sensitive amplified polymorphism quantification.
 
+Useful in comparisons with amplified fragment length polymorphism data and phenotypic data, as you can then compare (AMOVA) the variance of genetics and epigenetics as in Bertrand's plantain paper. 
+
+In this paper, 1-2% of variance between populations or regions is attributed to those differences. Most variation is within-region or within-population. 
+
+Field samples had more between-site genetic and epigenetic diversity. Epigenetics becaues of common environment, genetics because wind pollination is impossible in greenhouses. 
+
+Table shows it's more about environment than geography. 
+Would we expect that MSAP-h would be a highly significant determiner of field sample phenotypes? What does hemimethylation do biologically? I think it's that the expression difference between unmethylated and hemimethylated is much greater than the difference between hemi and fully methylated, so hemimethylation is going to have a higher proportion of variance explained. 
+
+Relationship between epigenetics and environment:
+When controlled for geography, environment has a large effect on epigenetics. 
+Relationship between epigenetics and landuse: Landuse has a pretty small effect on epigenetics. 
 
 
 ------    
@@ -643,6 +660,24 @@ Some organisms have nonbinary methylation. This is especially noticeable when yo
 
 
 ### Entry 58: 2020-04-01, Wednesday.   
+We're all dead. April Fools!
+
+Mapping rate for copepod bisulfite seq varied by group, which is kinda weird.
+Sometimes prokaryotic DNA contaminates samples, which makes mapping rates artificially low. This is verified by BLASTing unmapped reads. 
+
+When you get low mapping reads with Bisulfite seq, it's fairly common to go back and re-map. 
+
+M-bias plot of methylation report shows distribution of methylation calls across read. You'd expect that over a *read* the methylation bias would be minimal. Ours look pretty good. ACtually, since the restriction enzyme cuts at CpG sites, maybe we'd expect a CpG bias at the beginning of a read.
+
+Analysis of .cov.gz reads:
+Each row is a chromosome (scaffold), fourth column is methylation percentage, fifth column is unmethylated cytosines (count), sixth colunmn is methylated cytosines (count). 
+
+AA: Ancestral population
+AH: CO2 treatment
+HA: heat treatment
+HH: CO2 and heat treatment
+
+
 
 
 
